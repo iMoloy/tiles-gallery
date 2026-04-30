@@ -1,11 +1,13 @@
 import Banner from "@/components/Banner";
 import MarqueeSection from "@/components/MarqueeSection";
+import FeaturedTiles from "@/components/FeaturedTiles";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10 pb-10">
+    <main>
       <Banner />
       <MarqueeSection />
-    </div>
+      <FeaturedTiles />
+    </main>
   );
 }
