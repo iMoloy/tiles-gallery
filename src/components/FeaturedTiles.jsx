@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function FeaturedTiles() {
   const [tiles, setTiles] = useState([]);
@@ -30,11 +31,13 @@ export default function FeaturedTiles() {
             key={tile.id}
             className="card card-compact bg-base-100 shadow-xl hover:shadow-2xl transition-all border border-slate-100 group"
           >
-            <figure className="h-60 overflow-hidden">
-              <img
+            <figure className="relative h-60 overflow-hidden">
+              <Image
                 src={tile.image}
                 alt={tile.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                fill
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </figure>
             <div className="card-body">

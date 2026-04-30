@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AllTilesPage() {
   const [tiles, setTiles] = useState([]);
@@ -39,11 +40,13 @@ export default function AllTilesPage() {
             key={tile.id}
             className="card bg-base-100 shadow-xl border border-slate-200"
           >
-            <figure className="h-48">
-              <img
+            <figure className="relative h-48">
+              <Image
                 src={tile.image}
                 alt={tile.title}
-                className="w-full h-full object-cover"
+                fill
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 100vw"
+                className="object-cover"
               />
             </figure>
             <div className="card-body">

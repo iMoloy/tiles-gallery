@@ -1,12 +1,9 @@
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import {
-  FaArrowLeft,
-  FaCheckCircle,
-  FaExclamationCircle,
-} from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function TileDetails() {
   const { id } = useParams();
@@ -50,11 +47,13 @@ export default function TileDetails() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-base-100 shadow-2xl rounded-3xl overflow-hidden border border-base-200">
         {/* Image Section */}
-        <div className="h-[400px] md:h-full">
-          <img
+        <div className="relative h-100 md:h-full">
+          <Image
             src={tile.image}
             alt={tile.title}
-            className="w-full h-full object-cover"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover"
           />
         </div>
 

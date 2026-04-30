@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Banner() {
   return (
     <section 
-      className="relative h-[400px] md:h-[500px] flex items-center justify-center text-white text-center px-4 overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="relative h-100 md:h-125 flex items-center justify-center text-white text-center px-4 overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ 
         // একদম পারফেক্ট ডিরেক্ট ইমেজ লিংক
         backgroundImage: "url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1920')" 
