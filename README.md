@@ -27,11 +27,9 @@ Add your deployed Vercel link here after hosting.
 - `@better-auth/mongo-adapter`
 - `mongodb`
 - `daisyui`
-- `@heroui/react`
 - `react-fast-marquee`
 - `react-icons`
 - `animate.css`
-- `framer-motion`
 
 ## Environment Variables
 
