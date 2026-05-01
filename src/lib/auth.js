@@ -11,7 +11,7 @@ export const auth = betterAuth({
   }),
   secret:
     process.env.BETTER_AUTH_SECRET ||
-    "tiles-gallery-local-secret-change-this-before-deploy",
+    "luminatiles-local-secret-change-this-before-deploy",
   baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3000",
   emailAndPassword: {
     enabled: true,
