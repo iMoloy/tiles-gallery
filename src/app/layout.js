@@ -6,7 +6,7 @@ import { Providers } from "./providers";
 
 export const metadata = {
   title: "LuminaTiles",
-  description: "A website to showcase a tile gallery.",
+  description: "LuminaTiles is a curated tiles gallery for modern spaces.",
 };
 
 export default function RootLayout({ children }) {

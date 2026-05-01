@@ -22,7 +22,7 @@ export default async function UpdateProfilePage() {
         Update Information
       </h1>
       <p className="mb-8 mt-3 text-slate-600">
-        Keep your profile details fresh for your tile gallery account.
+        Keep your LuminaTiles profile details fresh.
       </p>
       <UpdateProfileForm user={session.user} />
     </div>

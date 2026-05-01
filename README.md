@@ -1,6 +1,6 @@
-# LuminaTiles - Tiles Gallery
+# LuminaTiles
 
-LuminaTiles is a responsive Next.js App Router website for showcasing a curated tile gallery. Visitors can browse all tiles, search by title, and authenticated users can open private tile details and manage their profile.
+LuminaTiles is a responsive Next.js App Router website for showcasing a curated tiles gallery. Visitors can browse all tiles, search by title, and authenticated users can open private tile details and manage their profile.
 
 ## Live URL
 

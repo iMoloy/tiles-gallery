@@ -11,7 +11,7 @@ export default function NotFound() {
           Page Not Found
         </h1>
         <p className="mt-4 text-slate-600">
-          The page you are looking for is not available in the tile gallery.
+          The page you are looking for is not available on LuminaTiles.
         </p>
         <Link
           href="/"

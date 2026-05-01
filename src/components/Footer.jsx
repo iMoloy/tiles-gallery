@@ -10,8 +10,8 @@ export default function Footer() {
             Lumina<span className="text-white">Tiles</span>
           </h6>
           <p className="max-w-xs leading-relaxed text-slate-300">
-            A curated tile gallery for warm homes, focused studios, and polished
-            commercial spaces.
+            LuminaTiles curates warm, modern surfaces for homes, studios, and
+            polished commercial spaces.
           </p>
         </aside>
 
