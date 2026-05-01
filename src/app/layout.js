@@ -1,4 +1,10 @@
+import { Poppins } from "next/font/google";
 import "./globals.css";
+
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 import "animate.css";
 import NavbarComponent from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -18,7 +24,7 @@ export default function RootLayout({ children }) {
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <body className="antialiased" suppressHydrationWarning>
+      <body className={`${poppins.className} antialiased`} suppressHydrationWarning>
         <Providers>
           <NavbarComponent />
           <main className="min-h-[calc(100vh-200px)]">{children}</main>
