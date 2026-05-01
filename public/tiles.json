@@ -5,14 +5,19 @@
     "description": "Elegant and luxurious white marble tile suitable for premium living room floors.",
     "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=800",
     "category": "marble",
-    "price": 85.0,
+    "price": 85,
     "currency": "USD",
     "dimensions": "60x120 cm",
     "material": "Marble",
     "creator": "Ari Stone Studio",
     "styleDescription": "Bright hotel-style marble with soft veining for clean luxury rooms.",
-    "tags": ["Luxury", "White", "Marble"],
-    "inStock": true
+    "tags": [
+      "Luxury",
+      "White",
+      "Marble"
+    ],
+    "inStock": true,
+    "rating": "4.3"
   },
   {
     "id": "tile_002",
@@ -26,8 +31,13 @@
     "material": "Porcelain",
     "creator": "Nord Floor Lab",
     "styleDescription": "Natural timber warmth with the easy cleaning benefit of porcelain.",
-    "tags": ["Warm", "Wood", "Porcelain"],
-    "inStock": true
+    "tags": [
+      "Warm",
+      "Wood",
+      "Porcelain"
+    ],
+    "inStock": true,
+    "rating": "4.8"
   },
   {
     "id": "tile_003",
@@ -35,14 +45,19 @@
     "description": "Industrial style concrete-look porcelain tile, perfect for modern contemporary homes.",
     "image": "https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&q=80&w=800",
     "category": "concrete-look",
-    "price": 42.0,
+    "price": 42,
     "currency": "USD",
     "dimensions": "80x80 cm",
     "material": "Porcelain",
     "creator": "Urban Grid Works",
     "styleDescription": "Soft industrial concrete texture for lofts, studios, and open layouts.",
-    "tags": ["Industrial", "Grey", "Minimalist"],
-    "inStock": true
+    "tags": [
+      "Industrial",
+      "Grey",
+      "Minimalist"
+    ],
+    "inStock": true,
+    "rating": "4.7"
   },
   {
     "id": "tile_004",
@@ -50,14 +65,19 @@
     "description": "Warm, earthy terracotta floor tiles bringing a rustic and vintage vibe to your space.",
     "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800",
     "category": "terracotta",
-    "price": 30.0,
+    "price": 30,
     "currency": "USD",
     "dimensions": "40x40 cm",
     "material": "Clay",
     "creator": "Clay & Sun Atelier",
     "styleDescription": "Earthy handcrafted character inspired by Mediterranean courtyards.",
-    "tags": ["Earthy", "Rustic", "Clay"],
-    "inStock": true
+    "tags": [
+      "Earthy",
+      "Rustic",
+      "Clay"
+    ],
+    "inStock": true,
+    "rating": "4.4"
   },
   {
     "id": "tile_005",
@@ -65,14 +85,19 @@
     "description": "Trendy hexagon shape with a sleek matte black finish, highly popular for bathroom floors.",
     "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800",
     "category": "mosaic",
-    "price": 62.0,
+    "price": 62,
     "currency": "USD",
     "dimensions": "20x20 cm",
     "material": "Porcelain",
     "creator": "Mono Pattern Co.",
     "styleDescription": "Bold matte geometry made for bathrooms, entryways, and accent floors.",
-    "tags": ["Black", "Hexagon", "Modern"],
-    "inStock": true
+    "tags": [
+      "Black",
+      "Hexagon",
+      "Modern"
+    ],
+    "inStock": true,
+    "rating": "4.3"
   },
   {
     "id": "tile_006",
@@ -80,14 +105,19 @@
     "description": "Beautiful speckled terrazzo design that adds character and color to commercial or residential floors.",
     "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800",
     "category": "terrazzo",
-    "price": 55.0,
+    "price": 55,
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Composite",
     "creator": "Speck House",
     "styleDescription": "Playful terrazzo chips with a calm base for creative homes and shops.",
-    "tags": ["Terrazzo", "Colorful", "Playful"],
-    "inStock": true
+    "tags": [
+      "Terrazzo",
+      "Colorful",
+      "Playful"
+    ],
+    "inStock": true,
+    "rating": "4.6"
   },
   {
     "id": "tile_007",
@@ -95,14 +125,19 @@
     "description": "Eye-catching geometric patterns for a modern and bold look in your hallway or kitchen.",
     "image": "https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=800",
     "category": "patterned",
-    "price": 48.0,
+    "price": 48,
     "currency": "USD",
     "dimensions": "30x30 cm",
     "material": "Ceramic",
     "creator": "Pattern Yard",
     "styleDescription": "Graphic repeating shapes that bring movement to compact spaces.",
-    "tags": ["Geometric", "Ceramic", "Statement"],
-    "inStock": false
+    "tags": [
+      "Geometric",
+      "Ceramic",
+      "Statement"
+    ],
+    "inStock": false,
+    "rating": "4.0"
   },
   {
     "id": "tile_008",
@@ -110,14 +145,19 @@
     "description": "Minimalist light grey porcelain floor tiles that make spaces look larger and brighter.",
     "image": "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&q=80&w=800",
     "category": "porcelain",
-    "price": 38.0,
+    "price": 38,
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Porcelain",
     "creator": "Softline Surfaces",
     "styleDescription": "Quiet grey tone that keeps rooms bright without feeling plain.",
-    "tags": ["Grey", "Minimalist", "Porcelain"],
-    "inStock": true
+    "tags": [
+      "Grey",
+      "Minimalist",
+      "Porcelain"
+    ],
+    "inStock": true,
+    "rating": "4.5"
   },
   {
     "id": "tile_009",
@@ -125,14 +165,19 @@
     "description": "Intricate vintage floral patterns designed to serve as a statement piece on any floor.",
     "image": "https://images.unsplash.com/photo-1582582494705-f8ce0b0c24f0?auto=format&fit=crop&q=80&w=800",
     "category": "patterned",
-    "price": 52.0,
+    "price": 52,
     "currency": "USD",
     "dimensions": "45x45 cm",
     "material": "Ceramic",
     "creator": "Archive Tile House",
     "styleDescription": "Decorative floral pattern with vintage charm for feature floors.",
-    "tags": ["Vintage", "Floral", "Decorative"],
-    "inStock": true
+    "tags": [
+      "Vintage",
+      "Floral",
+      "Decorative"
+    ],
+    "inStock": true,
+    "rating": "4.1"
   },
   {
     "id": "tile_010",
@@ -140,13 +185,18 @@
     "description": "Highly durable natural slate stone perfect for outdoor patios or heavy traffic indoor floors.",
     "image": "https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=800",
     "category": "natural-stone",
-    "price": 75.0,
+    "price": 75,
     "currency": "USD",
     "dimensions": "30x60 cm",
     "material": "Slate",
     "creator": "Stone Ridge Studio",
     "styleDescription": "Deep slate texture for grounded interiors and durable outdoor patios.",
-    "tags": ["Slate", "Dark", "Natural"],
-    "inStock": true
+    "tags": [
+      "Slate",
+      "Dark",
+      "Natural"
+    ],
+    "inStock": true,
+    "rating": "4.7"
   }
 ]

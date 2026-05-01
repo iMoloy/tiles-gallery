@@ -61,6 +61,7 @@ export default async function TileDetails({ params }) {
             <InfoBox title="Dimensions" value={tile.dimensions} />
             <InfoBox title="Category" value={tile.category} />
             <InfoBox title="Price" value={`$${tile.price} ${tile.currency}`} />
+            <InfoBox title="Rating" value={`${tile.rating} / 5.0 ⭐`} />
           </div>
 
           <div className="mt-8">
