@@ -69,30 +69,38 @@ export default function Footer() {
           <div className="grid grid-flow-col gap-6">
             {/* Font Awesome Icons */}
             <a
-              href="#"
+              href="https://www.facebook.com/"
               className="text-2xl text-slate-400 transition-colors hover:text-[#d99a75]"
               aria-label="Facebook"
+              target="_blank"
+              rel="noreferrer"
             >
               <FaFacebook />
             </a>
             <a
-              href="#"
+              href="https://twitter.com/"
               className="text-2xl text-slate-400 transition-colors hover:text-[#d99a75]"
               aria-label="Twitter"
+              target="_blank"
+              rel="noreferrer"
             >
               <FaTwitter />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/"
               className="text-2xl text-slate-400 transition-colors hover:text-[#d99a75]"
               aria-label="Instagram"
+              target="_blank"
+              rel="noreferrer"
             >
               <FaInstagram />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/"
               className="text-2xl text-slate-400 transition-colors hover:text-[#d99a75]"
               aria-label="LinkedIn"
+              target="_blank"
+              rel="noreferrer"
             >
               <FaLinkedin />
             </a>
