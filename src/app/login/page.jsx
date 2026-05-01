@@ -64,7 +64,9 @@ export default function LoginPage() {
         </h1>
 
         {error ? (
-          <div className="alert alert-error mt-6 text-sm text-white">{error}</div>
+          <div className="alert alert-error mt-6 text-sm text-white">
+            {error}
+          </div>
         ) : null}
 
         <form onSubmit={handleLogin} className="mt-6 space-y-4">
@@ -93,7 +95,7 @@ export default function LoginPage() {
 
           <button
             disabled={loading}
-            className="btn w-full border-none bg-[#4e6b52] text-white hover:bg-[#405844]"
+            className="btn w-full border-none mt-4 bg-[#4e6b52] text-white hover:bg-[#405844]"
           >
             {loading ? "Logging in..." : "Login"}
           </button>
@@ -101,7 +103,10 @@ export default function LoginPage() {
 
         <div className="divider text-sm text-slate-400">OR</div>
 
-        <button onClick={handleGoogleLogin} className="btn btn-outline w-full gap-2">
+        <button
+          onClick={handleGoogleLogin}
+          className="btn btn-outline w-full gap-2"
+        >
           <FaGoogle className="text-red-500" />
           Continue with Google
         </button>

@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { Providers } from "./providers";
 
 export const metadata = {
-  title: "Tiles Gallery",
+  title: "LuminaTiles",
   description: "A website to showcase a tile gallery.",
 };
 
