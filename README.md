@@ -4,7 +4,11 @@ LuminaTiles is a responsive Next.js App Router website for showcasing a curated 
 
 ## Live URL
 
-Add your deployed Vercel link here after hosting.
+https://luminatiles.vercel.app/
+
+## Repository
+
+https://github.com/iMoloy/tiles-gallery
 
 ## Key Features
 
@@ -37,7 +41,7 @@ Create `.env.local` from `.env.example` and add your real values.
 
 ```env
 BETTER_AUTH_SECRET=replace-with-a-32-character-secret
-BETTER_AUTH_URL=http://localhost:3000
+BETTER_AUTH_URL=https://luminatiles.vercel.app
 MONGODB_URI=your-mongodb-uri
 MONGODB_DB=tiles_gallery
 GOOGLE_CLIENT_ID=your-google-client-id
