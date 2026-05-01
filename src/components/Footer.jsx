@@ -3,20 +3,20 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-200 mt-10">
-      <div className="footer p-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+    <footer className="mt-10 bg-[#17211c] text-slate-200">
+      <div className="footer mx-auto grid max-w-7xl grid-cols-1 gap-10 p-10 md:grid-cols-3">
         <aside>
-          <h6 className="text-primary opacity-100 text-3xl font-bold mb-4">
+          <h6 className="mb-4 text-3xl font-black text-[#d99a75] opacity-100">
             Lumina<span className="text-white">Tiles</span>
           </h6>
-          <p className="max-w-xs leading-relaxed text-slate-400">
-            Premium collection of unique tiles for your dream home. Redefining
-            your living and working spaces with elegance.
+          <p className="max-w-xs leading-relaxed text-slate-300">
+            A curated tile gallery for warm homes, focused studios, and polished
+            commercial spaces.
           </p>
         </aside>
 
         <nav>
-          <h6 className="footer-title opacity-100 font-bold text-white mb-4">
+          <h6 className="footer-title mb-4 font-bold text-white opacity-100">
             Explore
           </h6>
           <Link
@@ -46,8 +46,8 @@ export default function Footer() {
         </nav>
 
         <nav>
-          <h6 className="footer-title opacity-100 font-bold text-white mb-4">
-            Contact
+          <h6 className="footer-title mb-4 font-bold text-white opacity-100">
+            Contact Us
           </h6>
           <p className="mb-2 text-slate-400">Email: info@luminatiles.com</p>
           <p className="mb-2 text-slate-400">Phone: +880 1234 567890</p>
@@ -57,7 +57,7 @@ export default function Footer() {
         </nav>
       </div>
 
-      <div className="footer px-10 py-6 border-t border-slate-700 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div className="footer mx-auto flex max-w-7xl flex-col items-center justify-between border-t border-white/10 px-10 py-6 md:flex-row">
         <aside className="items-center grid-flow-col">
           <p className="text-sm font-semibold text-slate-400">
             Copyright &copy; {new Date().getFullYear()} - All rights reserved by
@@ -70,25 +70,29 @@ export default function Footer() {
             {/* Font Awesome Icons */}
             <a
               href="#"
-              className="text-slate-400 hover:text-primary transition-colors text-2xl"
+              className="text-2xl text-slate-400 transition-colors hover:text-[#d99a75]"
+              aria-label="Facebook"
             >
               <FaFacebook />
             </a>
             <a
               href="#"
-              className="text-slate-400 hover:text-primary transition-colors text-2xl"
+              className="text-2xl text-slate-400 transition-colors hover:text-[#d99a75]"
+              aria-label="Twitter"
             >
               <FaTwitter />
             </a>
             <a
               href="#"
-              className="text-slate-400 hover:text-primary transition-colors text-2xl"
+              className="text-2xl text-slate-400 transition-colors hover:text-[#d99a75]"
+              aria-label="Instagram"
             >
               <FaInstagram />
             </a>
             <a
               href="#"
-              className="text-slate-400 hover:text-primary transition-colors text-2xl"
+              className="text-2xl text-slate-400 transition-colors hover:text-[#d99a75]"
+              aria-label="LinkedIn"
             >
               <FaLinkedin />
             </a>

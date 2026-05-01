@@ -9,6 +9,9 @@
     "currency": "USD",
     "dimensions": "60x120 cm",
     "material": "Marble",
+    "creator": "Ari Stone Studio",
+    "styleDescription": "Bright hotel-style marble with soft veining for clean luxury rooms.",
+    "tags": ["Luxury", "White", "Marble"],
     "inStock": true
   },
   {
@@ -21,6 +24,9 @@
     "currency": "USD",
     "dimensions": "20x100 cm",
     "material": "Porcelain",
+    "creator": "Nord Floor Lab",
+    "styleDescription": "Natural timber warmth with the easy cleaning benefit of porcelain.",
+    "tags": ["Warm", "Wood", "Porcelain"],
     "inStock": true
   },
   {
@@ -33,6 +39,9 @@
     "currency": "USD",
     "dimensions": "80x80 cm",
     "material": "Porcelain",
+    "creator": "Urban Grid Works",
+    "styleDescription": "Soft industrial concrete texture for lofts, studios, and open layouts.",
+    "tags": ["Industrial", "Grey", "Minimalist"],
     "inStock": true
   },
   {
@@ -45,6 +54,9 @@
     "currency": "USD",
     "dimensions": "40x40 cm",
     "material": "Clay",
+    "creator": "Clay & Sun Atelier",
+    "styleDescription": "Earthy handcrafted character inspired by Mediterranean courtyards.",
+    "tags": ["Earthy", "Rustic", "Clay"],
     "inStock": true
   },
   {
@@ -57,18 +69,24 @@
     "currency": "USD",
     "dimensions": "20x20 cm",
     "material": "Porcelain",
+    "creator": "Mono Pattern Co.",
+    "styleDescription": "Bold matte geometry made for bathrooms, entryways, and accent floors.",
+    "tags": ["Black", "Hexagon", "Modern"],
     "inStock": true
   },
   {
     "id": "tile_006",
     "title": "Terrazzo Style Floor Tile",
     "description": "Beautiful speckled terrazzo design that adds character and color to commercial or residential floors.",
-    "image": "https://images.unsplash.com/photo-1620214659124-7ebba3d20bd3?auto=format&fit=crop&q=80&w=800",
+    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800",
     "category": "terrazzo",
     "price": 55.0,
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Composite",
+    "creator": "Speck House",
+    "styleDescription": "Playful terrazzo chips with a calm base for creative homes and shops.",
+    "tags": ["Terrazzo", "Colorful", "Playful"],
     "inStock": true
   },
   {
@@ -81,6 +99,9 @@
     "currency": "USD",
     "dimensions": "30x30 cm",
     "material": "Ceramic",
+    "creator": "Pattern Yard",
+    "styleDescription": "Graphic repeating shapes that bring movement to compact spaces.",
+    "tags": ["Geometric", "Ceramic", "Statement"],
     "inStock": false
   },
   {
@@ -93,6 +114,9 @@
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Porcelain",
+    "creator": "Softline Surfaces",
+    "styleDescription": "Quiet grey tone that keeps rooms bright without feeling plain.",
+    "tags": ["Grey", "Minimalist", "Porcelain"],
     "inStock": true
   },
   {
@@ -105,6 +129,9 @@
     "currency": "USD",
     "dimensions": "45x45 cm",
     "material": "Ceramic",
+    "creator": "Archive Tile House",
+    "styleDescription": "Decorative floral pattern with vintage charm for feature floors.",
+    "tags": ["Vintage", "Floral", "Decorative"],
     "inStock": true
   },
   {
@@ -117,6 +144,9 @@
     "currency": "USD",
     "dimensions": "30x60 cm",
     "material": "Slate",
+    "creator": "Stone Ridge Studio",
+    "styleDescription": "Deep slate texture for grounded interiors and durable outdoor patios.",
+    "tags": ["Slate", "Dark", "Natural"],
     "inStock": true
   }
 ]

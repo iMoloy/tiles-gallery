@@ -2,29 +2,53 @@ import Link from "next/link";
 
 export default function Banner() {
   return (
-    <section 
-      className="relative h-100 md:h-125 flex items-center justify-center text-white text-center px-4 overflow-hidden bg-cover bg-center bg-no-repeat"
-      style={{ 
-        // একদম পারফেক্ট ডিরেক্ট ইমেজ লিংক
-        backgroundImage: "url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1920')" 
+    <section
+      className="relative isolate min-h-[78vh] overflow-hidden bg-cover bg-center px-4 text-white"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1920')",
       }}
     >
-      {/* Background Overlay (যাতে টেক্সট ক্লিয়ার বোঝা যায়) */}
-      <div className="absolute inset-0 bg-slate-900/60 z-0"></div>
-      
-      <div className="relative z-10 flex flex-col items-center gap-6">
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
-          Discover Premium Floor Tiles
-        </h1>
-        <p className="text-lg md:text-xl text-gray-200 max-w-2xl">
-          Upgrade your home with our exclusive collection of durable and aesthetic floor tiles designed for modern living spaces.
+      <div className="absolute inset-0 -z-10 bg-[#17211c]/68"></div>
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-28 tile-pattern opacity-35"></div>
+
+      <div className="mx-auto flex min-h-[78vh] max-w-7xl items-center">
+        <div className="max-w-3xl animate__animated animate__fadeInUp">
+          <p className="mb-4 inline-flex rounded-full border border-white/30 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em]">
+            Curated surfaces for modern rooms
+          </p>
+          <h1 className="text-4xl font-black leading-tight md:text-6xl">
+            Discover Your Perfect Aesthetic
+          </h1>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/85">
+            Browse ceramic, marble, terrazzo, slate, and patterned tiles made to
+            help every room feel intentional from the first step.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/all-tiles"
+              className="btn border-none bg-[#b96f4a] px-8 text-white hover:bg-[#a26040]"
+            >
+              Browse Now
+            </Link>
+            <a
+              href="#featured-tiles"
+              className="btn border-white/40 bg-white/10 text-white hover:bg-white/20"
+            >
+              Featured Tiles
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-6 right-6 hidden w-72 rounded-lg border border-white/25 bg-white/12 p-4 backdrop-blur md:block">
+        <p className="text-sm uppercase tracking-[0.18em] text-white/70">
+          This week
         </p>
-        <Link 
-          href="/all-tiles" 
-          className="btn btn-primary btn-lg rounded-full px-8 mt-2 uppercase tracking-wider font-bold border-none"
-        >
-          Explore Collection
-        </Link>
+        <h2 className="mt-1 text-2xl font-bold">Modern Geometric Patterns</h2>
+        <p className="mt-2 text-sm text-white/80">
+          Strong lines, calm colors, and a showroom-ready finish.
+        </p>
       </div>
     </section>
   );
