@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
 
 export default function UpdateProfileForm({ user }) {
   const router = useRouter();
@@ -11,7 +12,6 @@ export default function UpdateProfileForm({ user }) {
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-    setError("");
     setLoading(true);
 
     const form = e.target;
@@ -26,20 +26,17 @@ export default function UpdateProfileForm({ user }) {
     setLoading(false);
 
     if (updateError) {
-      setError(updateError.message || "Could not update your profile.");
+      toast.error(updateError.message || "Could not update your profile.");
       return;
     }
 
+    toast.success("Profile updated successfully!");
     router.push("/my-profile");
     router.refresh();
   };
 
   return (
     <form onSubmit={handleUpdate} className="soft-card rounded-lg bg-white p-6">
-      {error ? (
-        <div className="alert alert-error mb-5 text-sm text-white">{error}</div>
-      ) : null}
-
       <div className="grid gap-4">
         <label className="form-control">
           <span className="label-text mb-2 font-semibold">Name</span>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 import { authClient } from "@/lib/auth-client";
 
 export default function RegisterPage() {
@@ -14,8 +15,6 @@ export default function RegisterPage() {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    setError("");
-    setSuccess("");
     setLoading(true);
 
     const form = e.target;
@@ -34,25 +33,23 @@ export default function RegisterPage() {
     setLoading(false);
 
     if (registerError) {
-      setError(registerError.message || "Registration failed.");
+      toast.error(registerError.message || "Registration failed.");
       return;
     }
 
-    setSuccess("Registration successful. Please login now.");
+    toast.success("Registration successful. Please login now.");
     form.reset();
     router.push("/login");
   };
 
   const handleGoogleLogin = async () => {
-    setError("");
-
     const { error: googleError } = await authClient.signIn.social({
       provider: "google",
       callbackURL: "/",
     });
 
     if (googleError) {
-      setError(
+      toast.error(
         googleError.message ||
           "Google login is not configured yet. Please check environment variables.",
       );
@@ -68,15 +65,6 @@ export default function RegisterPage() {
         <h1 className="mt-2 text-center text-3xl font-black text-[#17211c]">
           Create Account
         </h1>
-
-        {error ? (
-          <div className="alert alert-error mt-6 text-sm text-white">{error}</div>
-        ) : null}
-        {success ? (
-          <div className="alert alert-success mt-6 text-sm text-white">
-            {success}
-          </div>
-        ) : null}
 
         <form onSubmit={handleRegister} className="mt-6 grid gap-4">
           <label className="form-control">

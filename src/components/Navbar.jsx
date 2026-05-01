@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import { FaBars, FaLayerGroup } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 export default function NavbarComponent() {
   const router = useRouter();
@@ -12,6 +13,7 @@ export default function NavbarComponent() {
 
   const handleLogout = async () => {
     await authClient.signOut();
+    toast.success("Successfully logged out!");
     router.push("/login");
     router.refresh();
   };

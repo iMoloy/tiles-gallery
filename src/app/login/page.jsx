@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 import { authClient } from "@/lib/auth-client";
 
 export default function LoginPage() {
@@ -13,7 +14,6 @@ export default function LoginPage() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError("");
     setLoading(true);
 
     const form = e.target;
@@ -29,24 +29,23 @@ export default function LoginPage() {
     setLoading(false);
 
     if (loginError) {
-      setError(loginError.message || "Login failed. Please try again.");
+      toast.error(loginError.message || "Login failed. Please try again.");
       return;
     }
 
+    toast.success("Successfully logged in!");
     router.push("/");
     router.refresh();
   };
 
   const handleGoogleLogin = async () => {
-    setError("");
-
     const { error: googleError } = await authClient.signIn.social({
       provider: "google",
       callbackURL: "/",
     });
 
     if (googleError) {
-      setError(
+      toast.error(
         googleError.message ||
           "Google login is not configured yet. Please check environment variables.",
       );
@@ -62,12 +61,6 @@ export default function LoginPage() {
         <h1 className="mt-2 text-center text-3xl font-black text-[#17211c]">
           Welcome Back
         </h1>
-
-        {error ? (
-          <div className="alert alert-error mt-6 text-sm text-white">
-            {error}
-          </div>
-        ) : null}
 
         <form onSubmit={handleLogin} className="mt-6 space-y-4">
           <label className="form-control">

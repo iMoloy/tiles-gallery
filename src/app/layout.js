@@ -2,8 +2,9 @@ import "./globals.css";
 import "animate.css";
 import NavbarComponent from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Providers } from "./providers";
-
 export const metadata = {
   title: "LuminaTiles",
   description: "LuminaTiles is a curated tiles gallery for modern spaces.",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
           <NavbarComponent />
           <main className="min-h-[calc(100vh-200px)]">{children}</main>
           <Footer />
+          <ToastContainer position="top-center" autoClose={3000} />
         </Providers>
       </body>
     </html>
