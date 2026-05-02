@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
-import { FaBars, FaLayerGroup } from "react-icons/fa";
+import { FaBars, FaLayerGroup, FaUserCircle } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 export default function NavbarComponent() {
@@ -68,23 +68,23 @@ export default function NavbarComponent() {
           <>
             <Link
               href="/my-profile"
-              className="hidden items-center gap-2 font-medium hover:text-primary sm:flex"
+              className="flex items-center hover:opacity-80"
+              title="My Profile"
             >
               <div className="avatar">
                 <div className="size-8 rounded-full bg-base-200">
-                  {session.user.image ? (
-                    <Image
+                  {session.user?.image ? (
+                    <img
                       src={session.user.image}
                       alt={session.user.name || "User"}
-                      width={32}
-                      height={32}
-                      unoptimized
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover rounded-full"
+                      referrerPolicy="no-referrer"
                     />
-                  ) : null}
+                  ) : (
+                    <FaUserCircle className="h-full w-full text-base-content/50" />
+                  )}
                 </div>
               </div>
-              Profile
             </Link>
             <button onClick={handleLogout} className="btn btn-sm bg-[#17211c] text-white hover:bg-[#2c3d33]">
               Logout

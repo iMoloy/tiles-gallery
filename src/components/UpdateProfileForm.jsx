@@ -5,9 +5,10 @@ import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 
+const IMGBB_API_KEY = process.env.NEXT_PUBLIC_IMGBB_API_KEY || "71f8541560b267adf2e51cd2cb15d14f";
+
 export default function UpdateProfileForm({ user }) {
   const router = useRouter();
-  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleUpdate = async (e) => {
@@ -16,11 +17,37 @@ export default function UpdateProfileForm({ user }) {
 
     const form = e.target;
     const name = form.name.value;
-    const image = form.image.value;
+    const imageFile = form.image.files[0];
+    
+    let imageUrl = user.image;
+
+    if (imageFile) {
+      const formData = new FormData();
+      formData.append("image", imageFile);
+      
+      try {
+        const response = await fetch(`https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`, {
+          method: "POST",
+          body: formData,
+        });
+        const data = await response.json();
+        if (data.success) {
+          imageUrl = data.data.display_url;
+        } else {
+          toast.error("Failed to upload image.");
+          setLoading(false);
+          return;
+        }
+      } catch (err) {
+        toast.error("An error occurred during image upload.");
+        setLoading(false);
+        return;
+      }
+    }
 
     const { error: updateError } = await authClient.updateUser({
       name,
-      image,
+      image: imageUrl,
     });
 
     setLoading(false);
@@ -50,13 +77,12 @@ export default function UpdateProfileForm({ user }) {
         </label>
 
         <label className="form-control">
-          <span className="label-text mb-2 font-semibold">Image</span>
+          <span className="label-text mb-2 font-semibold">Profile Image</span>
           <input
             name="image"
-            type="url"
-            defaultValue={user.image || ""}
-            placeholder="https://example.com/photo.jpg"
-            className="input input-bordered w-full"
+            type="file"
+            accept="image/*"
+            className="file-input file-input-bordered w-full"
           />
         </label>
       </div>
@@ -70,3 +96,4 @@ export default function UpdateProfileForm({ user }) {
     </form>
   );
 }
+
