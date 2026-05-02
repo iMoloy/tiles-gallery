@@ -26,7 +26,7 @@ export default async function TileDetails({ params }) {
       </Link>
 
       <div className="soft-card grid overflow-hidden rounded-lg bg-white md:grid-cols-2">
-        <div className="relative min-h-[360px] md:min-h-[620px]">
+        <div className="relative min-h-90 md:min-h-155">
           <Image
             src={tile.image}
             alt={tile.title}

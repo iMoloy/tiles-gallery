@@ -66,7 +66,7 @@ function ProfileInfo({ title, value }) {
       <p className="text-xs font-bold uppercase tracking-[0.16em] text-slate-400">
         {title}
       </p>
-      <p className="mt-2 break-words text-lg font-semibold text-[#17211c]">
+      <p className="mt-2 wrap-break-word text-lg font-semibold text-[#17211c]">
         {value}
       </p>
     </div>
