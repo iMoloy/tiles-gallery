@@ -1,86 +1,150 @@
-# LuminaTiles
+<div align="center">
 
-LuminaTiles is a responsive Next.js App Router website for showcasing a curated tiles gallery. Visitors can browse all tiles, search by title, and authenticated users can open private tile details and manage their profile.
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a0a2e,100:16213e&height=180&section=header&text=LuminaTiles&fontSize=46&fontColor=ffffff&fontAlignY=38&desc=Responsive%20Tiles%20Gallery%20%26%20Authentication%20App&descAlignY=58&descSize=16&descColor=c084fc&animation=fadeIn" width="100%" alt="LuminaTiles banner" />
 
-## Live URL
+  [![Live App](https://img.shields.io/badge/🌐%20Live%20App-luminatiles.vercel.app-a855f7?style=for-the-badge&logo=vercel&logoColor=white)](https://luminatiles.vercel.app)
+  [![GitHub](https://img.shields.io/badge/GitHub-iMoloy%2Ftiles--gallery-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iMoloy/tiles-gallery)
 
-https://luminatiles.vercel.app/
+</div>
 
-## Repository
+---
 
-https://github.com/iMoloy/tiles-gallery
+## 📖 Overview
 
-## Key Features
+**LuminaTiles** is a responsive Next.js App Router website for showcasing a curated tiles gallery. Visitors can browse all tiles and search by title. Authenticated users can access private tile details, manage their profile, and upload a profile picture via ImgBB — secured with **Better Auth** (email/password + Google OAuth).
 
-- Responsive navbar with Home, All Tiles, My Profile, login, and logout states
-- Clickable profile avatar in the navbar linking to the My Profile page
-- Home page banner, scrolling new-arrival marquee, and 4 featured tile cards
-- All Tiles page with a large search input and tile cards
-- Private tile details page with high-resolution preview, creator, style description, tags, dimensions, material, and price
-- Better Auth email/password registration and login
-- Google social login setup
-- Private My Profile page and Update Information page for name and profile picture
-- Profile picture upload powered by ImgBB (no database storage bloat)
-- Toast notifications for success/error feedback across the app
-- Custom footer with social links and Contact Us section
-- Loading and not-found UI
+> **Live at** → [https://luminatiles.vercel.app](https://luminatiles.vercel.app)
 
-## NPM Packages Used
+---
 
-- `next`
-- `react`
-- `react-dom`
-- `better-auth`
-- `@better-auth/mongo-adapter`
-- `mongodb`
-- `daisyui`
-- `react-fast-marquee`
-- `react-icons`
-- `animate.css`
-- `react-toastify`
+## 🛠️ Technologies Used
 
-## Environment Variables
+| Technology | Version | Purpose |
+|---|---|---|
+| [Next.js](https://nextjs.org/) | `16.2.4` | React framework (App Router) |
+| [React](https://react.dev/) | `19.2.4` | UI library |
+| [Tailwind CSS](https://tailwindcss.com/) | `^4` | Utility-first styling |
+| [DaisyUI](https://daisyui.com/) | `^5.5.19` | Component library |
+| [Better Auth](https://www.better-auth.com/) | `^1.6.9` | Auth (email/password + Google OAuth) |
+| [MongoDB](https://www.mongodb.com/) | `^7.2.0` | Database (via `@better-auth/mongo-adapter`) |
+| [React Fast Marquee](https://www.react-fast-marquee.com/) | `^1.6.5` | Scrolling new-arrivals banner |
+| [React Icons](https://react-icons.github.io/) | `^5.6.0` | Icon library |
+| [React Toastify](https://fkhadra.github.io/react-toastify/) | `^11.1.0` | Toast notifications |
+| [animate.css](https://animate.style/) | `^4.1.1` | CSS animations |
+| [ImgBB API](https://api.imgbb.com/) | — | Profile picture upload (no DB bloat) |
 
-Create `.env.local` from `.env.example` and add your real values.
+---
 
-```env
-BETTER_AUTH_SECRET=replace-with-a-32-character-secret
-BETTER_AUTH_URL=https://luminatiles.vercel.app
-MONGODB_URI=your-mongodb-uri
-MONGODB_DB=tiles_gallery
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
-NEXT_PUBLIC_IMGBB_API_KEY=your-imgbb-api-key
-```
+## ✨ Core Features
 
-> Get a free ImgBB API key from [api.imgbb.com](https://api.imgbb.com/).
+- **Responsive Navbar** — Home, All Tiles, My Profile, Login/Logout states with avatar
+- **Home Page** — Hero banner, scrolling new-arrival marquee, 4 featured tile cards
+- **All Tiles + Search** — Full gallery with live search by title
+- **Private Tile Details** — High-res preview, creator, style, tags, dimensions, material, and price (auth required)
+- **Better Auth** — Email/password registration + Google social login
+- **My Profile** — Private page with editable name and profile picture upload via ImgBB
+- **Toast Notifications** — Success/error feedback across all interactions
+- **Custom Footer** — Social links and contact section
 
-## Run Locally
+### Route Permissions
 
-```bash
-npm install
-npm run dev
-```
+| Route | Access |
+|---|---|
+| `/`, `/all-tiles`, `/login`, `/register` | Public |
+| `/tile/[id]`, `/my-profile`, `/my-profile/update` | Private (auth required) |
 
-Open `http://localhost:3000`.
+---
 
-## Route Permissions
+## 📦 Dependencies
 
-- Public: `/`, `/all-tiles`, `/login`, `/register`
-- Private: `/tile/[id]`, `/my-profile`, `/my-profile/update`
+### Production
 
-## Suggested Commit Steps
+| Package | Version | Purpose |
+|---|---|---|
+| `next` | `16.2.4` | Framework |
+| `react` / `react-dom` | `19.2.4` | UI |
+| `better-auth` | `^1.6.9` | Authentication |
+| `@better-auth/mongo-adapter` | `^1.6.9` | MongoDB session adapter |
+| `mongodb` | `^7.2.0` | Database driver |
+| `daisyui` | `^5.5.19` | Components |
+| `react-fast-marquee` | `^1.6.5` | Marquee scroll |
+| `react-icons` | `^5.6.0` | Icons |
+| `react-toastify` | `^11.1.0` | Toasts |
+| `animate.css` | `^4.1.1` | Animations |
 
-1. Setup project and install packages
-2. Add navbar and footer
-3. Add home banner
-4. Add marquee section
-5. Add tile JSON data
-6. Add featured tiles section
-7. Add all tiles gallery and search
-8. Add Better Auth setup
-9. Add login and register pages
-10. Add private tile details and profile pages
-11. Add profile image upload with ImgBB
-12. Add toast notifications
+### Development
 
+| Package | Purpose |
+|---|---|
+| `tailwindcss` `^4` | CSS framework |
+| `eslint`, `eslint-config-next` | Linting |
+
+---
+
+## 🚀 Run Locally
+
+### Prerequisites
+- **Node.js** v18 or higher
+- **MongoDB Atlas** URI
+- **ImgBB API key** → [api.imgbb.com](https://api.imgbb.com/)
+
+### Steps
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/iMoloy/tiles-gallery.git
+   cd tiles-gallery
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Configure environment**
+
+   Create `.env.local`:
+
+   ```env
+   BETTER_AUTH_SECRET=replace-with-a-32-character-secret
+   BETTER_AUTH_URL=http://localhost:3000
+   MONGODB_URI=mongodb+srv://<user>:<pass>@cluster.mongodb.net
+   MONGODB_DB=tiles_gallery
+   GOOGLE_CLIENT_ID=your-google-client-id
+   GOOGLE_CLIENT_SECRET=your-google-client-secret
+   NEXT_PUBLIC_IMGBB_API_KEY=your-imgbb-api-key
+   ```
+
+4. **Start the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000)
+
+### Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start dev server |
+| `npm run build` | Build for production |
+| `npm run start` | Serve production build |
+| `npm run lint` | Run ESLint |
+
+---
+
+## 🔗 Resources
+
+- 🌐 **Live App** → [https://luminatiles.vercel.app](https://luminatiles.vercel.app)
+- 🐙 **GitHub** → [github.com/iMoloy/tiles-gallery](https://github.com/iMoloy/tiles-gallery)
+- 💼 **Author** → [linkedin.com/in/iMoloy](https://linkedin.com/in/iMoloy)
+
+---
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,50:1a0a2e,100:0d1117&height=100&section=footer&animation=fadeIn" width="100%" alt="Footer" />
+  <sub>Made with ❤️ by <strong>Moloy Krishna Paul</strong></sub>
+</div>
