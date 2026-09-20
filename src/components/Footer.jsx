@@ -67,7 +67,7 @@ export default function Footer() {
 
         <nav className="md:place-self-center md:justify-self-end mt-4 md:mt-0">
           <div className="grid grid-flow-col gap-6">
-            {/* Font Awesome Icons */}
+            {/* Social Links */}
             <a
               href="https://www.facebook.com/"
               className="text-2xl text-slate-400 transition-colors hover:text-[#d99a75]"

@@ -39,8 +39,10 @@
 
 - **Responsive Navbar** — Home, All Tiles, My Profile, Login/Logout states with avatar
 - **Home Page** — Hero banner, scrolling new-arrival marquee, 4 featured tile cards
-- **All Tiles + Search** — Full gallery with live search by title
+- **All Tiles + Search & Filter** — Full gallery with live search by title, and dynamic dropdown filters for Material and Color
 - **Private Tile Details** — High-res preview, creator, style, tags, dimensions, material, and price (auth required)
+- **2D Room Visualizer** — Interactive preview of tiles applied to a virtual room floor with **Day & Night mode** lighting simulation
+- **Tile Quantity & Cost Calculator** — Input room size (sq ft) to estimate total tiles needed (including 10% waste buffer) and calculate total cost
 - **Better Auth** — Email/password registration + Google social login
 - **My Profile** — Private page with editable name and profile picture upload via ImgBB
 - **Toast Notifications** — Success/error feedback across all interactions

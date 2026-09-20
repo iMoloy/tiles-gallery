@@ -4,6 +4,8 @@ import { notFound, redirect } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
 import { getServerSession } from "@/lib/session";
 import { getTileById } from "@/lib/tiles";
+import TileCalculator from "@/components/TileCalculator";
+import RoomVisualizer from "@/components/RoomVisualizer";
 
 export default async function TileDetails({ params }) {
   const session = await getServerSession();
@@ -82,8 +84,12 @@ export default async function TileDetails({ params }) {
             <h2 className="font-bold text-[#17211c]">Description</h2>
             <p className="mt-2 leading-7 text-slate-600">{tile.description}</p>
           </div>
+
+          <TileCalculator price={tile.price} dimensions={tile.dimensions} currency={tile.currency} />
         </div>
       </div>
+
+      <RoomVisualizer tileImage={tile.image} title={tile.title} />
     </div>
   );
 }

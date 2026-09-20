@@ -74,9 +74,11 @@ export default function NavbarComponent() {
               <div className="avatar">
                 <div className="size-8 rounded-full bg-base-200">
                   {session.user?.image ? (
-                    <img
+                    <Image
                       src={session.user.image}
                       alt={session.user.name || "User"}
+                      width={32}
+                      height={32}
                       className="h-full w-full object-cover rounded-full"
                       referrerPolicy="no-referrer"
                     />

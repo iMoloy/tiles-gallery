@@ -1,12 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function AllTilesPage() {
   const [tiles, setTiles] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedMaterial, setSelectedMaterial] = useState("All");
+  const [selectedColor, setSelectedColor] = useState("All");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -16,9 +18,30 @@ export default function AllTilesPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  const filteredTiles = tiles.filter((tile) =>
-    tile.title.toLowerCase().includes(searchQuery.toLowerCase()),
-  );
+  // Derive unique materials
+  const materials = useMemo(() => {
+    const mats = new Set(tiles.map((t) => t.material));
+    return ["All", ...Array.from(mats).sort()];
+  }, [tiles]);
+
+  // Derive unique colors from tags (assuming tags like White, Black, Grey, Earthy, Colorful are colors/tones)
+  const colors = useMemo(() => {
+    const colorKeywords = ["White", "Black", "Grey", "Brown", "Blue", "Green", "Red", "Earthy", "Colorful", "Dark"];
+    const foundColors = new Set();
+    tiles.forEach(tile => {
+      tile.tags.forEach(tag => {
+        if (colorKeywords.includes(tag)) foundColors.add(tag);
+      });
+    });
+    return ["All", ...Array.from(foundColors).sort()];
+  }, [tiles]);
+
+  const filteredTiles = tiles.filter((tile) => {
+    const matchesSearch = tile.title.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesMaterial = selectedMaterial === "All" || tile.material === selectedMaterial;
+    const matchesColor = selectedColor === "All" || tile.tags.includes(selectedColor);
+    return matchesSearch && matchesMaterial && matchesColor;
+  });
 
   return (
     <div>
@@ -31,21 +54,40 @@ export default function AllTilesPage() {
             Browse All Floor Tiles
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-white/80">
-            Search by title and open any tile to see its full material,
-            creator, style notes, and tags.
+            Search by title and filter by material or color to find your perfect tile.
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-12">
-        <div className="mb-10 flex justify-center">
+        <div className="mb-10 flex flex-col md:flex-row justify-center gap-4">
           <input
             type="text"
-            placeholder="Search by title, for example Marble or Wood"
-            className="input input-lg w-full max-w-2xl rounded-lg border-[#4e6b52] bg-white shadow-lg focus:outline-[#4e6b52]"
+            placeholder="Search by title..."
+            className="input input-lg w-full max-w-md rounded-lg border-[#4e6b52] bg-white shadow-lg focus:outline-[#4e6b52]"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
+          
+          <select 
+            className="select select-lg w-full md:w-auto rounded-lg border-[#4e6b52] bg-white shadow-lg focus:outline-[#4e6b52]"
+            value={selectedMaterial}
+            onChange={(e) => setSelectedMaterial(e.target.value)}
+          >
+            {materials.map(mat => (
+              <option key={mat} value={mat}>{mat === "All" ? "All Materials" : mat}</option>
+            ))}
+          </select>
+
+          <select 
+            className="select select-lg w-full md:w-auto rounded-lg border-[#4e6b52] bg-white shadow-lg focus:outline-[#4e6b52]"
+            value={selectedColor}
+            onChange={(e) => setSelectedColor(e.target.value)}
+          >
+            {colors.map(col => (
+              <option key={col} value={col}>{col === "All" ? "All Colors" : col}</option>
+            ))}
+          </select>
         </div>
 
         {loading ? (
@@ -94,7 +136,7 @@ export default function AllTilesPage() {
           <div className="rounded-lg border border-dashed border-[#4e6b52] bg-white p-10 text-center">
             <h2 className="text-2xl font-bold">No tiles found</h2>
             <p className="mt-2 text-slate-600">
-              Try a different title like Marble, Terrazzo, or Slate.
+              Try adjusting your filters or search query.
             </p>
           </div>
         )}
